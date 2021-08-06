@@ -1,0 +1,15 @@
+-- Table: public.c_horario
+
+-- DROP TABLE public.c_horario;
+
+CREATE TABLE public.c_horario
+(
+    id_horario integer NOT NULL,
+    horario time with time zone,
+    CONSTRAINT c_horarios_pkey PRIMARY KEY (id_horario)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.c_horario
+    OWNER to postgres;

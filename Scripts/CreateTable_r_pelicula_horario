@@ -1,0 +1,24 @@
+-- Table: public.r_pelicula_horario
+
+-- DROP TABLE public.r_pelicula_horario;
+
+CREATE TABLE public.r_pelicula_horario
+(
+    id_pelicula_horario integer NOT NULL,
+    id_pelicula integer,
+    id_horario integer,
+    CONSTRAINT r_pelicula_horario_pkey PRIMARY KEY (id_pelicula_horario),
+    CONSTRAINT fk_pelicula_horario_horario FOREIGN KEY (id_horario)
+        REFERENCES public.c_horario (id_horario) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION,
+    CONSTRAINT fk_pelicula_horario_pelicula FOREIGN KEY (id_pelicula)
+        REFERENCES public.m_pelicula (id_pelicula) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.r_pelicula_horario
+    OWNER to postgres;
