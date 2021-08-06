@@ -40,9 +40,9 @@ public class PeliculaService {
         }
 //
         nuevaPelicula.setNombre_pelicula(datos.getNombre_pelicula());
-//        nuevaPelicula.setImagen_pelicula(datos.getImagenes_pelicula());
-//        nuevaPelicula.setDuracion_pelicula(datos.getDuracion_pelicula());
-//        nuevaPelicula.setClasificacion_pelicula(datos.getClasificacion_pelicula());
+        nuevaPelicula.setImagen_pelicula(datos.getImagenes_pelicula());
+        nuevaPelicula.setDuracion_pelicula(datos.getDuracion_pelicula());
+        nuevaPelicula.setClasificacion_pelicula(datos.getClasificacion_pelicula());
         nuevaPelicula.setStatus_pelicula(datos.getStatus_pelicula());
 
         nuevaPelicula = peliculaRepository.save(nuevaPelicula);
