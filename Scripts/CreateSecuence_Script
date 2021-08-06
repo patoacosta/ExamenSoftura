@@ -1,0 +1,13 @@
+-- SEQUENCE: public.sec_pelicula
+
+-- DROP SEQUENCE public.sec_pelicula;
+
+CREATE SEQUENCE public.sec_pelicula
+    INCREMENT 1
+    START 1
+    MINVALUE 1
+    MAXVALUE 100
+    CACHE 1;
+
+ALTER SEQUENCE public.sec_pelicula
+    OWNER TO postgres;
